@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Naetraffic 2PLAY - 우리들의 이야기</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/icon.png">
+</head>
+
+<body id="body">
+    <!--메인-->
+    <div id="mainsu">
+        <div id="uploader"></div><br>
+        <div id="maintitle">우리들의 이야기,</div><br><br>
+        <div id="subtitle">다시 시작하는 마음</div><br><br>
+        <!--다운 버튼-->
+        <button id="ansansinlinedownbtn" class="downbtn">출시 예정!</button>
+        <button id="hwayanglinedownbtn" class="downbtn" onclick="location.href = 'hwayangline/'">다운로드</button>
+        <button id="seoullooplinedownbtn" class="downbtn"onclick="location.href = 'https://cafe.naver.com/skyrailway/106364'">다운로드</button>
+    </div>
+    <div id="ads">AD</div>
+    <!--광고-->
+    <ins class="kakao_ad_area"
+        style="display:none;"
+        data-ad-unit="DAN-OqKUk2G8eTaZwNJq"
+        data-ad-width="728"
+        data-ad-height="90"></ins>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <!--로고-->
+    <img src="logo.png" alt="로고" class="image_logo">
+    <!--사이드바-->
+    <div id="sidebar">
+        <ul id="sidebarlist">
+            <li id="ansansinline">안산신선&nbsp;&nbsp;&nbsp;</li>
+            <li id="hwayangline">화양선&nbsp;&nbsp;&nbsp;</li>
+            <li id="seoulloopline">서울순환선&nbsp;&nbsp;&nbsp;</li><br>
+            <li id="otherlink" onclick="location.href = 'roadmap/'">로드맵&nbsp;&nbsp;&nbsp;</li>
+            <li id="otherlink" onclick="location.href = 'https://naetawiki.kro.kr/'">내타위키&nbsp;&nbsp;&nbsp;</li>
+            <li id="ad">이건 어때요?&nbsp;&nbsp;&nbsp;</li>
+        </ul>
+        <div id="noti">Naetraffic 2PLAY(이하 N2P)는<br> 단순 소프트웨어 제공원으로,<br>제공된 소프트웨어들에 대해 N2P는<br> 어떠한 법적 책임을 지지
+            않습니다.<br><br>Hosting by NAETAWIKI</div>
+    </div>
+    <script>
+        var ansansinlineclickListener = document.getElementById("ansansinline");
+        var hwayanglineclickListener = document.getElementById("hwayangline");
+        var seoullooplinelineclickListener = document.getElementById("seoulloopline");
+        var adclickListener = document.getElementById("ad");
+
+        var ansansinlinedownbtn = document.getElementById("ansansinlinedownbtn");
+        var hwayanglinedownbtn = document.getElementById("hwayanglinedownbtn");
+        var seoullooplinedownbtn = document.getElementById("seoullooplinedownbtn");
+
+        var uploader = document.getElementById("uploader");
+        var maintitle = document.getElementById("maintitle");
+        var subtitle = document.getElementById("subtitle");
+
+        var title = document.getElementById("title");
+        
+        var ad = document.getElementById("ads");
+
+        function titleinlineblock() {
+            uploader.style.display = "inline-block";
+            maintitle.style.display = "inline-block";
+            subtitle.style.display = "inline-block";
+            ads.style.display = "none";
+            document.body.style.backgroundSize = "cover";
+            title.innerHTML = "Naetraffic 2PLAY - 우리들의 이야기";
+        };
+
+        ansansinlineclickListener.addEventListener("click", function () {
+            ansansinlineclickListener.classList.add("clicked");
+            hwayanglineclickListener.classList.remove("clicked");
+            seoullooplinelineclickListener.classList.remove("clicked");
+            adclickListener.classList.remove("clicked");
+
+            document.body.style.backgroundImage = "url(img/2.png)";
+            uploader.innerHTML = "Naetraffic West";
+            maintitle.innerHTML = "수도권 전철<br>안산신선";
+            subtitle.innerHTML = "안산과 서울을 잇는 철도";
+            titleinlineblock();
+
+            ansansinlinedownbtn.style.display = "inline-block";
+            hwayanglinedownbtn.style.display = "none";
+            seoullooplinedownbtn.style.display = "none";
+        });
+
+        ansansinlinedownbtn.addEventListener("click", function () {
+            alert("출시 예정!");
+        });
+
+        hwayanglineclickListener.addEventListener("click", function () {
+            hwayanglineclickListener.classList.add("clicked");
+            ansansinlineclickListener.classList.remove("clicked");
+            seoullooplinelineclickListener.classList.remove("clicked");
+            adclickListener.classList.remove("clicked");
+
+            document.body.style.backgroundImage = "url(img/3.png)";
+            uploader.innerHTML = "Naetraffic West";
+            maintitle.innerHTML = "수도권 전철<br>화양선";
+            subtitle.innerHTML = "화성으로 가는 가장 빠른 길";
+            titleinlineblock();
+
+            ansansinlinedownbtn.style.display = "none";
+            hwayanglinedownbtn.style.display = "inline-block";
+            seoullooplinedownbtn.style.display = "none";
+        });
+
+        seoullooplinelineclickListener.addEventListener("click", function () {
+            seoullooplinelineclickListener.classList.add("clicked");
+            ansansinlineclickListener.classList.remove("clicked");
+            hwayanglineclickListener.classList.remove("clicked");
+            adclickListener.classList.remove("clicked");
+
+            document.body.style.backgroundImage = "url(img/4.png)";
+            uploader.innerHTML = "Naetraffic West";
+            maintitle.innerHTML = "수도권 전철<br>서울순환선";
+            subtitle.innerHTML = "서울에서 가장 붐비는 일상";
+            titleinlineblock();
+
+            ansansinlinedownbtn.style.display = "none";
+            hwayanglinedownbtn.style.display = "none";
+            seoullooplinedownbtn.style.display = "inline-block";
+        });
+
+        adclickListener.addEventListener("click", function() {
+            seoullooplinelineclickListener.classList.remove("clicked");
+            ansansinlineclickListener.classList.remove("clicked");
+            hwayanglineclickListener.classList.remove("clicked");
+            adclickListener.classList.add("clicked");
+
+            document.body.style.backgroundImage = "url(https://cdn.discordapp.com/attachments/1026042118457790466/1145412647446138970/ad1.png)";
+            document.body.style.backgroundSize = "contain";
+            uploader.style.display = "none";
+            maintitle.style.display = "none";
+            subtitle.style.display = "none";
+
+            ads.style.display = "inline-block";
+            
+            ansansinlinedownbtn.style.display = "none";
+            hwayanglinedownbtn.style.display = "none";
+            seoullooplinedownbtn.style.display = "none";
+
+            title.innerHTML = "Naetraffic 2PLAY - 광고맨";
+        });
+
+        ad.addEventListener("click", function() {
+            alert("본 광고는 어떠한 금전적 수익이 발생하지 않습니다.")
+        });
+    </script>
+</body>
+
+</html>

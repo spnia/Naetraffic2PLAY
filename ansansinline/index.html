@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N2P-다운로드 페이지</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="../img/icon.png">
+</head>
+<body>
+    <a href="../"><img src="logo.png" alt="로고" class="image_logo"></a><br><br><br><br><br><br>
+    <div id="main">
+    <span class="sub"><span id="subin">Naetraffic West 수도권 전철</span>안산신선</span><br>
+    <!--버튼 눌렀을 때 이용약관-->
+    <div id="primary">
+        <span id="close_button"></span><br><br>
+        <span class="pri_title">다운로드 이용약관</span><br>
+        <span class="pri_content">본 Add-On을 다운로드 하기 위해서는 아래의 이용약관에 동의해야 합니다.<br>이용약관에서 정의하는 "소프트웨어"는 Add-On 및 포함 되어있는 파일 전체를 의미합니다.</span><br><br>
+        <span class="pri_main">A. 본 소프트웨어는 "OpenBVE" 게임의 Add-On 목적으로만 사용할 수 있습니다.<br><br>
+            B. 본 소프트웨어를 무단으로 재배포하거나, 수정할 수 없습니다.<br><br>
+            C. 본 소프트웨어를 어떤 수단으로든 영리적으로 사용할 수 없습니다.<br><br>
+            D. 본 소프트웨어의 링크를 제공할 때, 해당 페이지의 링크를 제공하십시오.<br><br>
+            E. 본 소프트웨어의 원본 및 변형본을 소지하고 있다면, 해당 약관에 동의한 것으로 간주합니다.<br><br>
+            F. 본 이용약관을 준수하지 않을 경우 책임은 피제공자에게 있습니다.<br><br>
+            G. 본 이용약관은 언제든지 변경될 수 있으며, 이용약관의 유효 기간은 영구입니다.<br><br>
+            H. 이 외의 문의사항은 전자메일 chco41432@gmail.com 으로 연락하십시오.<br></span>
+        <button id="realdownload"></button>
+        <button id="realdownload1">동의 후 다운로드</button>
+        <!--버튼 눌렀을 때 이용약관-->
+    </div>
+    <!--버튼부-->
+    <button id="downloadbutton">Add-On 다운로드</button><br><br>
+    <button id="etcbutton" onclick="location.href='update.html'">업데이트 내역</button><br><br>
+    <button id="etcbutton" onclick="location.href='etc.html'">기타 내용</button>
+    <footer>
+        <div class="copyright">Copyright 2023. Hyusan, Team Naetraffic all rights reversed.<br>본 사이트와 연동되는 모든 저작물은 대한민국 저작권법의 보호를 받습니다.<br>사용 폰트 : 오뮤다이어리 - 오뮤 다예쁨체</div>
+    </footer>
+    </div>
+    <script>
+        // "Add-On 다운로드" 버튼을 눌렀을 때
+        document.querySelector('#downloadbutton').addEventListener('click', function() {
+            document.getElementById('primary').style.display = 'inline-block';
+            document.getElementById('downloadbutton').style.display = 'none';
+        });
+        
+        // "close_button" 버튼을 눌렀을 떄
+        document.querySelector('#close_button').addEventListener('click', function() {
+            document.getElementById('primary').style.display = 'none';
+            document.getElementById('downloadbutton').style.display = 'inline-block';
+        });
+
+        // "Add-On 다운로드" 버튼을 누르고 5초 타이머 후 다운로드 버튼 출력
+        document.getElementById("downloadbutton").addEventListener("click", function() {
+            var realdownbtn = document.getElementById("realdownload");
+            var realdownbtn1 = document.getElementById("realdownload1");
+            realdownbtn.innerHTML = "5초 후에 다운로드";
+
+            setTimeout(function() {
+                realdownbtn.innerHTML = "4초 후에 다운로드";
+            }, 1000);
+
+            setTimeout(function() {
+                realdownbtn.innerHTML = "3초 후에 다운로드";
+            }, 2000);
+
+            setTimeout(function() {
+                realdownbtn.innerHTML = "2초 후에 다운로드";
+            }, 3000);
+
+            setTimeout(function() {
+                realdownbtn.innerHTML = "1초 후에 다운로드";
+            }, 4000);
+
+            setTimeout(function() {
+                realdownbtn1.style.display = "inline-block";
+                realdownbtn.style.display = "none";
+            }, 5000);
+            
+            document.getElementById("close_button").addEventListener("click", function() {
+                realdownbtn.style.border = "1px solid gray";
+                realdownbtn.style.color = "gray";
+            });
+        });
+    </script>
+</body>
+</html>

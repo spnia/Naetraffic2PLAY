@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naetraffic 2PLAY - roadmap</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="../img/icon.png">
+</head>
+
+<body>
+    <a href="../"><img src="../logo.png" alt="로고" class="image_logo"></a><br>
+    <div id="toptitle">
+        <div id="title">Naetraffic Future Roadmap</div>
+        <div id="sub">We are the Future</div>
+        <div id="ar">⇓</div>
+    </div>
+    <div id="middle">
+        <br><br><br><br><br><br>
+        <div id="content1" class="con">
+            <div id="num" class="num1">1</div>
+            <div id="contitle" class="con1title">Ansansin Line</div>
+            <hr class="widthline">
+            <div id="consub" class="con1sub">Release Date<br>2023.09.**</div>
+        </div>
+        <hr id="ll1" class="lengthline">
+        <div id="content2" class="con">
+            <div id="num" class="num2">2</div>
+            <div id="contitle" class="con1title">Naeseoul Line</div>
+            <hr class="widthline">
+            <div id="consub" class="con1sub">Release Date<br>2024.**.**</div>
+        </div>
+        <hr id="ll2" class="lengthline">
+        <div id="content3" class="con">
+            <div id="num" class="num3">3</div>
+            <div id="contitle" class="con1title">SinGyeongbu Highspeed Railway Line</div>
+            <hr class="widthline">
+            <div id="consub" class="con1sub">Release Date<br>2024.**.**</div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">Copyright 2023. Hyusan, Team Naetraffic all rights reversed.<br>본 사이트와 연동되는 모든 저작물은 대한민국
+            저작권법의 보호를 받습니다.<br>사용 폰트 : 오뮤다이어리 - 오뮤 다예쁨체</div>
+    </footer>
+</body>
+<script>
+    //스크롤 위치 계산
+    function getScrollPos() {
+        return (window.scrollY + window.innerHeight) / document.body.clientHeight * 100
+    }
+
+    //변수
+    var con1 = document.getElementById("content1");
+    var ll1 = document.getElementById("ll1");
+    var con2 = document.getElementById("content2");
+    var ll2 = document.getElementById("ll2");
+    var con3 = document.getElementById("content3");
+
+    //스크롤 이벤트
+    document.addEventListener('scroll', () => {
+        const ScrollPos = getScrollPos();
+
+        //위치 파악용 임시
+        console.log(ScrollPos);
+
+        //만약 스크롤 위치가 161 이상이면
+        if(ScrollPos >= 161) {
+            con1.style.opacity = "100%";
+            con1.style.transform = "translateX(0vw)";
+        } else {
+            con1.style.opacity = "0%";
+            con1.style.transform = "translateX(-50vw)";
+        }
+        
+        //만약 스크롤 위치가 183 이상이면
+        if(ScrollPos >= 183) {
+            ll1.style.opacity = "100%";
+            ll1.style.transform = "translateY(0vw)";
+        } else {
+            ll1.style.opacity = "0%";
+            ll1.style.transform = "translateY(-20vw)";
+        }
+
+        //만약 스크롤 위치가 205 이상이면
+        if(ScrollPos >= 205) {
+            con2.style.opacity = "100%";
+            con2.style.transform = "translateX(0vw)";
+        } else {
+            con2.style.opacity = "0%";
+            con2.style.transform = "translateX(50vw)";
+        }
+        
+        //만약 스크롤 위치가 227 이상이면
+        if(ScrollPos >= 227) {
+            ll2.style.opacity = "100%";
+            ll2.style.transform = "translateY(0vw)";
+        } else {
+            ll2.style.opacity = "0%";
+            ll2.style.transform = "translateY(-20vw)";
+        }
+        
+        //만약 스크롤 위치가 249 이상이면
+        if(ScrollPos >= 249) {
+            con3.style.opacity = "100%";
+            con3.style.transform = "translateX(0vw)";
+        } else {
+            con3.style.opacity = "0%";
+            con3.style.transform = "translateX(-50vw)";
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: omyu_pretty;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.image_logo {
+    text-align: left;
+    float: left;
+    width: 100px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+/* 탑타이틀 */
+#toptitle {
+    color: white;
+    text-align: center;
+    margin-top: 45vh;
+}
+
+#title {
+    font-size: 70px;
+}
+
+#sub {
+    font-size: 30px;
+}
+
+#ar {
+    animation: animation 2.5s ease-in-out infinite;
+    font-size: 50px;
+    z-index: 6;
+}
+
+/* 미들 */
+#middle {
+    background-color: #ffffff;
+    margin-top: 500px;
+    padding-top: 10px;
+    text-align: center;
+    color: #303030;
+    transition: .5s all;
+    z-index: 6;
+}
+
+.con {
+    transition: .5s all;
+}
+
+hr {
+    transition: .5s all;
+    z-index: -1;
+}
+
+#ll1 {
+    background-image: linear-gradient(to bottom, red, #ff9800);
+}
+
+#ll2 {
+    background-image: linear-gradient(to bottom, #ff9800, #1d9895);
+}
+
+.widthline {
+    background-color: #303030;
+    height: 3px;
+    width: 5vw;
+    border: 0;
+}
+
+.lengthline {
+    background-color: #909090;
+    height: 100px;
+    width: 15px;
+    border: 0;
+}
+
+#num {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 200px;
+    color: #ffffff;
+    width: 200px;
+}
+
+.num1 {
+    display: inline-block;
+    background-color: red;
+    animation-delay: 2s;
+}
+
+.num2 {
+    display: inline-block;
+    background-color: #FF9800;
+    animation-delay: 4s;
+
+}
+
+.num3 {
+    display: inline-block;
+    background-color: #1d9895;
+    animation-delay: 6s;
+}
+
+#contitle {
+    font-size: 40px;
+}
+
+#consub {
+    font-size: 25px;
+}
+
+/* 저작권부분 */
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+@keyframes animation {
+    0% {opacity: 100%; transform: translateY(30px);}
+    50% {opacity: 0%; transform: translateY(50px);}
+    100% {opacity: 100%; transform: translateY(30px);}
+}
